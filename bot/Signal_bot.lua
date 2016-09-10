@@ -272,6 +272,13 @@ function create_config( )
     "Invite",
     "Warn",
     "Caption",
+    "time",
+    "love",
+    "kickall",
+    "expiretime",
+    "dler",
+    "boton",
+    "aazaan",
     "Payamresan"
     },
     sudo_users = {205962272,153898443,243286706},
