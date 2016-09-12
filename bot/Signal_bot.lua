@@ -278,23 +278,18 @@ function create_config( )
     "expiretime",
     "dler",
     "boton",
-    "aazaan",
-    "Payamresan"
+    "aazaan"
     },
-    sudo_users = {205962272,153898443,243286706},
+    sudo_users = {205962272},
     moderation = {data = 'data/moderation.json'},
     about_text = [[👑 Signal Bot 👑
-An advanced administration bot based on TG-CLI written in Lua
 
-🔰 Github 🔰
-https://github.com/SIGNALTEAM/SignalTG.git
-
-Admins:
+Admin:
 🔥 @mrghost_01 [Founder & Developer&sudo] 🔥
+Support team:
+🔥 @mr_shadow01 [Support team] 🔥
 
-🔥 @mr_shadow01 [Sudo] 🔥
-
-🔥 @mr_unknown01 [Sudo] 🔥
+🔥 @mr_unknown01 [Support team] 🔥
 
 Special thanks to
 SEEDTEAM
@@ -584,7 +579,9 @@ SuperGroup Commands:
 🔵 لیست ورود اعضا 🔴
 〰〰〰〰〰〰〰〰
 💥 شما میتوانید از / و ! و # استفاده کنید 💥
-💥 برای افزودن سازنده روبات به گروه استفاده کنند !invpouria صاحبان گروه میتونند از دستور 💥
+💥 برای خرید و کشب اطلاعات بیشتر دستورزیر را وارد کنید
+!gpf💥
+
 ]],
   }
   serialize_to_file(config, './data/config.lua')
