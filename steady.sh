@@ -6,7 +6,7 @@ VOLUNTARY=1
 VOLUNTARYCHECK=0
 I=1
 BOT=gbot
-RELOADTIME=15
+RELOADTIME=1
 
 
 function tmux_mode {
