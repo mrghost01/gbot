@@ -121,7 +121,7 @@ local function run(msg, matches)
         return
       end
     end
-    if matches[2] == "signal" then -- Put everything you like :)
+    if matches[2] == "gpf" then -- Put everything you like :)
       if not is_admin1(msg) then
         return "For admins only !"
       else
