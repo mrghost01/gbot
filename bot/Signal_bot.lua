@@ -260,6 +260,7 @@ function create_config( )
     "Voice",
     "Weather",
     "Welcome",
+    "dogify",
     "Whitelist",
     "Sticker",
     "Photo",
