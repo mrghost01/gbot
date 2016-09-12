@@ -72,10 +72,10 @@ local function warn_by_reply(extra, success, result) -- (on reply) /warn
   text = '[ '..name..' ]\n شما به دلیل رعایت نکردن قوانین اخطار دریافت میکنید.\nتعداد اخطار های شما : ۳/۴'
    elseif value == '3' then
    redis:hdel(hash, msg.from.id, '0')
-  text = '[ '..name..' ]\n به دلیل رعایت نکردن قوانین از گروه اخراج شد. (banned)\nتعداد اخطار ها : ۴/۴'
+  text = result.to.peer_id..'[ '..name..' ]\n به دلیل رعایت نکردن قوانین از گروه اخراج شد. (banned)\nتعداد اخطار ها : ۴/۴'
   local hash =  'banned:'..target
   redis:sadd(hash, msg.from.id)
-  chat_del_user(receiver, 'user#id'..msg.from.id, ok_cb, false)
+  kick_user_any(msg.from.peer_id, result.to.peer_id)
    end
   else
    redis:hset(hash, msg.from.id, '1')
@@ -182,12 +182,10 @@ end
 
 return {
   patterns = {
-    "^[!/#]([Ww][Aa][Rr][Nn])$",
-    "^[!/#]([Ww][Aa][Rr][Nn]) (.*)$",
-    "^[!/#]([Uu][Nn][Ww][Aa][Rr][Nn])$",
-    "^[!/#]([Uu][Nn][Ww][Aa][Rr][Nn]) (.*)$"
+    "^[!/]([Ww][Aa][Rr][Nn])$",
+    "^[!/]([Ww][Aa][Rr][Nn]) (.*)$",
+    "^[!/]([Uu][Nn][Ww][Aa][Rr][Nn])$",
+    "^[!/]([Uu][Nn][Ww][Aa][Rr][Nn]) (.*)$"
   }, 
   run = run 
 }
-
---By Arian
